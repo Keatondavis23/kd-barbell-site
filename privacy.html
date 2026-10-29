@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy policy — KD Barbell</title>
+  <meta name="description" content="KD Barbell privacy policy: what the Android app records, where it is kept, who processes it, how long it stays, and how to delete it.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site">
+    <a class="brand" href="index.html">KD Barbell</a>
+    <nav aria-label="Site">
+      <a href="privacy.html" aria-current="page">Privacy</a>
+      <a href="delete-account.html">Delete account</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>KD Barbell privacy policy</h1>
+    <p class="meta">Last updated: October 29, 2026. Applies to the KD Barbell Android app (package <code>com.fitledger.fitledger</code>) published by KD Barbell, and to this website.</p>
+
+    <div class="callout">
+      <p><strong>In short.</strong> KD Barbell is a personal log. It stores only what you put into it or ask it to read, on your phone and in your own private space in the app's cloud project. Signing in with a Google account is required. Nothing is sold, shared with other users, or used for advertising; the app has no analytics, advertising or crash-reporting software. You can export everything, delete records while keeping the account, or delete the account and all of its data inside the app or by email.</p>
+    </div>
+
+    <h2 id="who">Who we are and what this covers</h2>
+    <p>KD Barbell is published by KD Barbell (the "we" in this policy). Contact: <a href="mailto:nikelunch2000@gmail.com">nikelunch2000@gmail.com</a>. This policy covers the Android app and the pages of this website. It describes the app as it is built today; if the app changes in a way that affects your data, this page is updated and the date above changes.</p>
+
+    <h2 id="data">What the app records</h2>
+    <p>The app records only what you enter, import or allow it to read. Depending on how you use it, that is:</p>
+    <ul>
+      <li><strong>Training records</strong> — exercises (including ones you create), workouts, sets (weight and repetitions or seconds), cardio sessions, programs and saved workouts.</li>
+      <li><strong>Body and health records</strong> — body weight and body-fat figures, tape measurements, injuries and pain check-ins, lab results and the reference ranges you save with them, nutrition, sleep and vitals (such as steps, heart rate and blood pressure), and goals.</li>
+      <li><strong>Records imported from files you choose</strong> — a Cronometer nutrition export, a JEFIT workout export or a Samsung Health export (steps). The file is read on your phone and turned into records; the file itself is not uploaded. Each imported value keeps a note of where it came from, and the app stores import bookkeeping (the source record's identifier and a fingerprint of its values) so that importing the same file again does not duplicate anything.</li>
+      <li><strong>Health Connect data</strong> — only if you turn it on and grant the Android permissions: daily nutrition totals, step counts, heart-rate and resting-heart-rate figures and sleep sessions, from the apps you choose. See <a href="#health-connect">Health Connect</a>.</li>
+      <li><strong>Your Google account</strong> — the email address, display name and Google user identifier of the account you sign in with, and the account identifier (UID) Firebase assigns. The app shows your name or email in <em>Account &amp; sync</em> and stores the email on the phone to remember which account the phone's copy belongs to. The app does not request access to anything else in your Google account.</li>
+      <li><strong>An optional profile picture</strong> — an image you pick through the Android file picker, resized to 512 pixels and stored as a setting. The app does not request access to your photo library.</li>
+      <li><strong>Settings</strong> — units, goals, the layout of the Today page, which check-in fields you use, rest-timer preferences and similar choices.</li>
+      <li><strong>Sync bookkeeping</strong> — a random installation identifier the app generates the first time it syncs on a phone, written into each synced record so that your phones can tell which one made a change; revision counters and timestamps. This identifier is not derived from your device and is not shared with anyone outside the sync.</li>
+    </ul>
+    <p>The app does <strong>not</strong> collect your location, contacts, calendar, messages, call logs, microphone or camera input, browsing history, or an advertising identifier. It has no analytics, advertising or crash-reporting software, and it sends no usage statistics.</p>
+
+    <h2 id="sign-in">Google sign-in</h2>
+    <p>Signing in uses Google Sign-In and Firebase Authentication, both operated by Google. When you sign in, Google verifies your account and provides the app with your email address, display name, Google user identifier and profile-photo address; Firebase Authentication keeps a user record with that information and the sign-in times. Google states that Firebase Authentication also uses IP addresses and user-agent strings to protect sign-in against abuse, keeps logged IP addresses for a few weeks, retains other authentication information until the developer deletes the user, and removes it from live and backup systems within 180 days after that. Firebase Authentication runs from data centers in the United States. Google's handling of the sign-in itself is described in the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a> and in <a href="https://firebase.google.com/support/privacy" rel="noopener">Privacy and Security in Firebase</a>.</p>
+    <p>Signing in is required in the published app: the records of an account are kept apart from every other account's, and the app refuses to show one account's records to another.</p>
+
+    <h2 id="where">Where your data is kept</h2>
+    <h3>On your phone</h3>
+    <p>The working copy of your records is a database in the app's private storage on your phone. Android's automatic app backup is turned off for KD Barbell, so Android does not copy this database to your Google account. The copy stays on the phone until you delete records, delete the account, sign out (which removes the phone's copy after syncing it) or uninstall the app. The app does not keep a separate cloud cache; the phone database is the only local copy.</p>
+    <h3>In the cloud</h3>
+    <p>When you are signed in, your records are synced to Cloud Firestore, a Google Cloud database in the app's Firebase project, under a path that belongs to your account alone (<code>users/&lt;your UID&gt;/…</code>). Server-side security rules allow a signed-in account to read and write only its own path. Data travels between the phone and Google over encrypted (TLS) connections, and Google encrypts it at rest. Cloud Firestore stores the data in the Google Cloud location that was fixed when the project was created; Google may replicate it within that location for durability. The sync exists so that the same account can restore its records on another phone and so that two of your phones stay in step; the app never reads or writes outside your own path, and viewing records does not write anything to the cloud.</p>
+    <h3>Exports you make</h3>
+    <p><em>Profile › Export data</em> writes a complete copy of your records to a location you choose through the Android file picker. That file is yours; the app does not keep or upload it.</p>
+
+    <h2 id="processors">Who processes your data</h2>
+    <p>Google is the only service provider. It operates Firebase Authentication and Google Sign-In (identity), and Cloud Firestore (storage of your synced records) on our behalf under Google's <a href="https://firebase.google.com/terms/data-processing-terms" rel="noopener">Firebase Data Processing and Security Terms</a>. Google also processes the technical information that any online service receives, such as the IP address and request details of each connection, as described in its own terms. We do not sell your data, share it with other users, give it to advertisers or data brokers, or use it for research or profiling. We do not use it to show you advertising. We will disclose data only if the law requires it.</p>
+
+    <h2 id="health-connect">Health Connect</h2>
+    <p>Health Connect is Android's shared health data store on your phone. KD Barbell can <strong>read</strong> four categories from it, each only after you turn it on under <em>Data sources</em>, confirm the in-app consent (which names the signed-in account and this phone) and grant the Android permission: nutrition totals (<code>READ_NUTRITION</code>), steps (<code>READ_STEPS</code>), heart rate and resting heart rate (<code>READ_HEART_RATE</code>, <code>READ_RESTING_HEART_RATE</code>) and sleep sessions (<code>READ_SLEEP</code>). With the optional history permission (<code>READ_HEALTH_DATA_HISTORY</code>) an import can reach further back than the last 30 days. The app never writes to Health Connect.</p>
+    <p>What it reads becomes your own records: shown to you in Nutrition, Vitals and Sleep and in their charts, stored on your phone and synced to your own account space exactly like the records you type in. Health Connect data is not used for advertising, is not sold, is not shared with anyone, and is not used to make decisions about you. You can turn each category off in the app, or revoke the permissions in Health Connect, at any time; records already imported stay in your log until you delete them. Health Connect's own store belongs to Android and the apps that write to it; it is not changed by anything KD Barbell does.</p>
+
+    <h2 id="choices">Your choices and controls</h2>
+    <ul>
+      <li><strong>Export</strong> a complete copy of your records at any time (<em>Profile › Export data</em>).</li>
+      <li><strong>Delete individual records</strong> wherever they are shown, or a whole workout from its menu.</li>
+      <li><strong>Delete all records while keeping the account</strong>: <em>Profile › Delete all records</em> removes every record and setting on the phone and asks whether the cloud copy should go too. Keeping the cloud copy means the next sync brings everything back; deleting it removes your synced data at the next sync.</li>
+      <li><strong>Delete the account and everything in it</strong>: <em>Profile › Account &amp; sync › Delete my account and cloud data</em>, or by email. See <a href="delete-account.html">Delete your account</a>.</li>
+      <li><strong>Sign out</strong>: your records are synced first, then the phone's copy is removed; they come back when you sign in again.</li>
+      <li><strong>Health Connect</strong>: turn categories off in <em>Data sources</em>, or revoke the permissions in Health Connect.</li>
+      <li><strong>Troubleshooting summary</strong>: <em>Account &amp; sync › Help › Troubleshooting</em> can copy a short status text to your clipboard for a support message. It contains the app version, platform, and sync and Health Connect status with sanitized error codes, and deliberately no email address, identifier, record count or health value. Nothing is sent unless you paste it into a message yourself.</li>
+    </ul>
+
+    <h2 id="retention">How long data is kept</h2>
+    <ul>
+      <li><strong>Your records</strong> stay until you delete them. When you delete records, the account, or the cloud copy, the app deletes the corresponding documents from Cloud Firestore and the Firebase user record where applicable. Google states that Cloud Firestore data deleted by a customer is removed from its active systems and then from its backups, with a maximum of about 180 days, as described in <a href="https://cloud.google.com/docs/security/deletion" rel="noopener">Data deletion on Google Cloud</a>. We hold no other copy.</li>
+      <li><strong>The Firebase user record</strong> (email, name, photo address, identifiers, sign-in times) is kept until the account is deleted, after which Google removes it within 180 days. IP addresses logged by Firebase Authentication are kept by Google for a few weeks.</li>
+      <li><strong>The copy on your phone</strong> is kept until you delete records, delete the account, sign out or uninstall the app.</li>
+      <li><strong>Exports</strong> you made are files under your control; the app does not keep them.</li>
+      <li><strong>Support and deletion emails</strong> you send us, and our replies, are kept in our support mailbox for up to 12 months after the matter is closed, as a record that it was handled, and then deleted. You can ask us to delete the correspondence earlier.</li>
+    </ul>
+
+    <h2 id="security">Security</h2>
+    <p>Data moves between the app and Google over TLS; Google encrypts stored data at rest by default. Cloud Firestore security rules limit every signed-in account to its own path, and the app checks the signed-in account before every write. The app has not undergone an independent security audit or certification, and no system is perfectly secure; please use a Google account with 2-Step Verification and keep your phone locked.</p>
+
+    <h2 id="children">Children</h2>
+    <p>KD Barbell is intended for adults. It is not directed at children, and we do not knowingly collect information from anyone under 18. If you believe a child has created an account, email us and we will delete it.</p>
+
+    <h2 id="website">This website</h2>
+    <p>These pages are static files hosted on GitHub Pages. They set no cookies and contain no analytics, advertising or scripts, and they load nothing from third parties. GitHub, as the hosting provider, logs the IP address of each visitor for security purposes, as described in <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection" rel="noopener">GitHub's documentation</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub General Privacy Statement</a>. We do not receive those logs. If you email us, your message is handled by our email provider under its own terms.</p>
+
+    <h2 id="changes">Changes to this policy</h2>
+    <p>If this policy changes, the new version is published at this address with a new "Last updated" date. For a change that affects how your data is handled, the app's update notes will say so.</p>
+
+    <h2 id="contact">Contact</h2>
+    <p class="contact">KD Barbell — <a href="mailto:nikelunch2000@gmail.com">nikelunch2000@gmail.com</a></p>
+    <p>Questions about this policy, requests to access, export, correct or delete your data, and complaints all go to this address. For deletion, see <a href="delete-account.html">Delete your account</a>.</p>
+  </main>
+
+  <footer class="site">
+    <p>KD Barbell · <a href="privacy.html">Privacy</a> · <a href="delete-account.html">Delete account</a> · <a href="support.html">Support</a> · <a href="mailto:nikelunch2000@gmail.com">nikelunch2000@gmail.com</a></p>
+  </footer>
+</body>
+</html>

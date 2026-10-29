@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Delete your KD Barbell account</title>
+  <meta name="description" content="How to delete your KD Barbell account and data: inside the Android app, or by email without installing the app.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+  <header class="site">
+    <a class="brand" href="index.html">KD Barbell</a>
+    <nav aria-label="Site">
+      <a href="privacy.html">Privacy</a>
+      <a href="delete-account.html" aria-current="page">Delete account</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Delete your KD Barbell account</h1>
+    <p class="meta">For the KD Barbell Android app (package <code>com.fitledger.fitledger</code>), published by KD Barbell. Last updated: October 29, 2026.</p>
+
+    <p class="lead">You can delete your account and all of its data from inside the app, or ask us by email if you no longer have the app installed. Either way, everything stored for your account is removed.</p>
+
+    <h2 id="in-app">Option 1 — delete inside the app</h2>
+    <ol>
+      <li>Open KD Barbell and sign in with the account you want to delete.</li>
+      <li>Go to <strong>Profile › Account &amp; sync</strong> and tap <strong>Delete my account</strong>, then confirm <strong>Delete my account and cloud data</strong>. There are two confirmations; you may be asked to sign in with Google again, with the same account, because Google requires a recent sign-in before an account can be deleted.</li>
+      <li>The app then removes your synced records from the cloud, deletes your Firebase user record, and removes the copy on this phone, in that order. It finishes by itself even if it is interrupted or the phone restarts; the account's records are not shown and nothing syncs while the deletion is pending. A very large history (for example a multi-year import) can take more than one day because of a daily deletion limit; the app continues automatically.</li>
+      <li>When it is done the app returns to the sign-in screen. The Google account itself is not affected.</li>
+    </ol>
+    <p>If you only want to clear this phone, <strong>Sign out</strong> syncs your records and removes the phone's copy while keeping your account; signing in again restores them.</p>
+
+    <h2 id="email">Option 2 — request deletion by email</h2>
+    <p>If you cannot or do not want to use the app, email us from the Google account address you used to sign in to KD Barbell:</p>
+    <p class="contact"><a href="mailto:nikelunch2000@gmail.com?subject=KD%20Barbell%20account%20deletion%20request">nikelunch2000@gmail.com</a></p>
+    <p><a class="button" href="mailto:nikelunch2000@gmail.com?subject=KD%20Barbell%20account%20deletion%20request&amp;body=Please%20delete%20my%20KD%20Barbell%20account%20and%20all%20of%20its%20data.%0A%0AGoogle%20account%20used%20to%20sign%20in%3A%20">Email a deletion request</a></p>
+    <p>Please write "KD Barbell account deletion request" in the subject and state the Google account address the account uses. Nothing else is needed.</p>
+    <div class="note">
+      <p><strong>How we verify it is you.</strong> The request must come from the Google account address the KD Barbell account uses; that is the only identity the account has. We reply to that address to confirm before deleting. If a request arrives from a different address, we ask you to send it from the account's address, or to reply to our confirmation from it. We will never ask for your Google password, a verification code, or access to your account, and we cannot sign in as you.</p>
+    </div>
+    <p>This is a request handled by a person, not an automated service. We normally complete verified requests within 30 days and send a confirmation email when the deletion is done. If we cannot find an account for the address (for example because it was already deleted in the app), we tell you that instead.</p>
+
+    <h2 id="what-is-deleted">What is deleted</h2>
+    <ul>
+      <li><strong>All of your synced records in Cloud Firestore</strong> — training, body, health, nutrition, sleep, vitals, lab, program and import records, goals, settings and the profile picture, under your account's private path.</li>
+      <li><strong>Your Firebase Authentication user record</strong> — the email address, display name, profile-photo address, identifiers and sign-in times Firebase kept for the account.</li>
+      <li><strong>With the in-app option, the copy on that phone.</strong> With an email request we cannot reach your phone: any copy still in the app on your devices stays there until you uninstall the app or use <em>Profile › Delete all records</em>. Once the account is deleted, the app on those devices can no longer sync and returns to sign-in.</li>
+    </ul>
+    <p>Your Google account, and any data other apps or Health Connect hold, are not affected. Records you imported from Health Connect were copied into your KD Barbell account and are deleted with it; the originals stay in Health Connect and the apps that wrote them, under their own controls.</p>
+
+    <h2 id="retained">What is kept, and for how long</h2>
+    <ul>
+      <li><strong>Google's deletion window.</strong> After we or the app delete your records and user record, Google removes them from its active systems and then from its backups; Google commits to a maximum of about 180 days for Cloud Firestore data (<a href="https://cloud.google.com/docs/security/deletion" rel="noopener">Data deletion on Google Cloud</a>) and states the same 180-day window for Firebase Authentication user records. IP addresses that Firebase Authentication logged at sign-in are kept by Google for a few weeks (<a href="https://firebase.google.com/support/privacy" rel="noopener">Privacy and Security in Firebase</a>).</li>
+      <li><strong>Our correspondence.</strong> Your deletion request and our confirmation are kept in our support mailbox for up to 12 months after the deletion is completed, as a record that your request was fulfilled, and then deleted. You can ask us to delete them earlier.</li>
+      <li><strong>Nothing else.</strong> We hold no other copy of your data: no analytics, no logs of your records, no exports. Export files you created yourself are on your own devices.</li>
+    </ul>
+
+    <h2 id="keep-account">Delete records but keep the account</h2>
+    <ul>
+      <li><strong>Everything:</strong> <em>Profile › Delete all records</em> removes every record and setting on the phone and asks whether the cloud copy should be deleted too. Choose <em>Delete cloud data too</em> to clear your account's synced data while keeping the account; choose <em>Keep cloud copy</em> to clear only this phone (the next sync restores the records from the cloud).</li>
+      <li><strong>Individual records:</strong> delete a set, measurement, check-in, lab result or other record where it is shown; delete a whole workout from its menu (<em>Delete workout…</em>). Deletions sync to the cloud and to your other phones.</li>
+      <li><strong>Health Connect:</strong> turning a category off or revoking the permission stops future reading; records already imported stay until you delete them as above.</li>
+    </ul>
+    <p>If you would rather we do this for you, email us the same way; we can clear an account's synced data while keeping the user record, but a phone that still holds the records will upload them again at its next sync, so use <em>Delete all records</em> on your phones first.</p>
+
+    <h2 id="questions">Questions</h2>
+    <p>Email <a href="mailto:nikelunch2000@gmail.com">nikelunch2000@gmail.com</a>. The <a href="privacy.html">privacy policy</a> describes everything the app stores and where.</p>
+  </main>
+
+  <footer class="site">
+    <p>KD Barbell · <a href="privacy.html">Privacy</a> · <a href="delete-account.html">Delete account</a> · <a href="support.html">Support</a> · <a href="mailto:nikelunch2000@gmail.com">nikelunch2000@gmail.com</a></p>
+  </footer>
+</body>
+</html>
