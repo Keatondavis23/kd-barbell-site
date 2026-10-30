@@ -20,36 +20,36 @@
 
   <main>
     <h1>Delete your KD Barbell account</h1>
-    <p class="meta">For the KD Barbell Android app (package <code>com.fitledger.fitledger</code>), published by KD Barbell. Last updated: October 29, 2026.</p>
+    <p class="meta">For the KD Barbell Android app (package <code>com.fitledger.fitledger</code>), published by KD Barbell. Last updated: October 30, 2026.</p>
 
     <p class="lead">You can delete your account and all of its data from inside the app, or ask us by email if you no longer have the app installed. Either way, everything stored for your account is removed.</p>
 
     <h2 id="in-app">Option 1 — delete inside the app</h2>
     <ol>
       <li>Open KD Barbell and sign in with the account you want to delete.</li>
-      <li>Go to <strong>Profile › Account &amp; sync</strong> and tap <strong>Delete my account</strong>, then confirm <strong>Delete my account and cloud data</strong>. There are two confirmations; you may be asked to sign in with Google again, with the same account, because Google requires a recent sign-in before an account can be deleted.</li>
+      <li>Go to <strong>Profile › Account &amp; sync</strong> and tap <strong>Delete my account</strong>, then confirm <strong>Delete my account and cloud data</strong>. There are two confirmations; you may be asked to confirm the same account again — with its password, or with Google — because Firebase requires a recent sign-in before an account can be deleted.</li>
       <li>The app then removes your synced records from the cloud, deletes your Firebase user record, and removes the copy on this phone, in that order. It finishes by itself even if it is interrupted or the phone restarts; the account's records are not shown and nothing syncs while the deletion is pending. A very large history (for example a multi-year import) can take more than one day because of a daily deletion limit; the app continues automatically.</li>
       <li>When it is done the app returns to the sign-in screen. The Google account itself is not affected.</li>
     </ol>
     <p>If you only want to clear this phone, <strong>Sign out</strong> syncs your records and removes the phone's copy while keeping your account; signing in again restores them.</p>
 
     <h2 id="email">Option 2 — request deletion by email</h2>
-    <p>If you cannot or do not want to use the app, email us from the Google account address you used to sign in to KD Barbell:</p>
+    <p>If you cannot or do not want to use the app, email us from the address your KD Barbell account uses — the Google account you sign in with, or the email address you created the account with:</p>
     <p class="contact"><a href="mailto:nikelunch2000@gmail.com?subject=KD%20Barbell%20account%20deletion%20request">nikelunch2000@gmail.com</a></p>
-    <p><a class="button" href="mailto:nikelunch2000@gmail.com?subject=KD%20Barbell%20account%20deletion%20request&amp;body=Please%20delete%20my%20KD%20Barbell%20account%20and%20all%20of%20its%20data.%0A%0AGoogle%20account%20used%20to%20sign%20in%3A%20">Email a deletion request</a></p>
-    <p>Please write "KD Barbell account deletion request" in the subject and state the Google account address the account uses. Nothing else is needed.</p>
+    <p><a class="button" href="mailto:nikelunch2000@gmail.com?subject=KD%20Barbell%20account%20deletion%20request&amp;body=Please%20delete%20my%20KD%20Barbell%20account%20and%20all%20of%20its%20data.%0A%0AAccount%20email%20address%3A%20">Email a deletion request</a></p>
+    <p>Please write "KD Barbell account deletion request" in the subject and state the email address the account uses. Nothing else is needed — never send a password.</p>
     <div class="note">
-      <p><strong>How we verify it is you.</strong> The request must come from the Google account address the KD Barbell account uses; that is the only identity the account has. We reply to that address to confirm before deleting. If a request arrives from a different address, we ask you to send it from the account's address, or to reply to our confirmation from it. We will never ask for your Google password, a verification code, or access to your account, and we cannot sign in as you.</p>
+      <p><strong>How we verify it is you.</strong> The request must come from the email address the KD Barbell account uses (the Google account's address, or the address you signed up with); that is the only identity the account has. We reply to that address asking you to confirm, and we delete only after you answer <strong>yes</strong> from that address — nothing is deleted on the first message alone. If a request arrives from a different address, we ask you to send it from the account's address. We will never ask for a password, a verification code, or access to your account, and we cannot sign in as you.</p>
     </div>
-    <p>This is a request handled by a person, not an automated service. We normally complete verified requests within 30 days and send a confirmation email when the deletion is done. If we cannot find an account for the address (for example because it was already deleted in the app), we tell you that instead.</p>
+    <p>This is a request handled by a person, not an automated service. We normally complete confirmed requests within 30 days and send an email when the deletion is done. If we cannot find an account for the address (for example because it was already deleted in the app), we tell you that instead. If you do not answer our confirmation message within 30 days, the request is closed and nothing is deleted; you can simply write again.</p>
 
     <h2 id="what-is-deleted">What is deleted</h2>
     <ul>
       <li><strong>All of your synced records in Cloud Firestore</strong> — training, body, health, nutrition, sleep, vitals, lab, program and import records, goals, settings and the profile picture, under your account's private path.</li>
-      <li><strong>Your Firebase Authentication user record</strong> — the email address, display name, profile-photo address, identifiers and sign-in times Firebase kept for the account.</li>
+      <li><strong>Your Firebase Authentication user record</strong> — the email address, display name, the profile-photo address of a Google account or the password hash of an email account, identifiers and sign-in times Firebase kept for the account.</li>
       <li><strong>With the in-app option, the copy on that phone.</strong> With an email request we cannot reach your phone: any copy still in the app on your devices stays there until you uninstall the app or use <em>Profile › Delete all records</em>. Once the account is deleted, the app on those devices can no longer sync and returns to sign-in.</li>
     </ul>
-    <p>Your Google account, and any data other apps or Health Connect hold, are not affected. Records you imported from Health Connect were copied into your KD Barbell account and are deleted with it; the originals stay in Health Connect and the apps that wrote them, under their own controls.</p>
+    <p>Your Google account (if you used one), and any data other apps or Health Connect hold, are not affected. Records you imported from Health Connect were copied into your KD Barbell account and are deleted with it; the originals stay in Health Connect and the apps that wrote them, under their own controls.</p>
 
     <h2 id="retained">What is kept, and for how long</h2>
     <ul>
@@ -75,3 +75,4 @@
   </footer>
 </body>
 </html>
+
